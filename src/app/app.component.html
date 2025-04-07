@@ -4,6 +4,7 @@
     <li><a routerLink="/login">Login</a></li>
   </ul>
   <ul class="navbar-links"  *ngIf="seeMenu">
+    <li><a >{{user}}</a></li>
     <li><a routerLink="/subject-parnerts-review">Ver a mis compañeros de Clase</a></li>
     <li><a routerLink="/subject-review">Revisar mis materias</a></li>
     <li><a (click)="cerrarSesion()" routerLink="/login">Cerrar session</a></li>

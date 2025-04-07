@@ -1,0 +1,27 @@
+.tableSubjets {
+    display: flex;
+    margin: 3%;
+    margin-top: 0.2%;
+    font-size: 0.9vw;
+    padding: 1%;
+    flex-direction: column;
+
+}
+.titleDesign{
+    display: flex;
+    font-size: 1.2vw;
+    align-items: center;
+    justify-content: center;
+    background: rgb(25, 118, 210);
+    border-radius: 24%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font: oblique bold 120% cursive;
+    color: white;
+}
+.filtro{
+    display: flex;
+    font-size: 1.2vw;
+    align-items: center;
+    justify-content: center;
+}

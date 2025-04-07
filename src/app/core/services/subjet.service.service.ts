@@ -22,4 +22,9 @@ export class SubjetServiceService {
       `${this.url}GetSubjetAsignated/${id_student}`
     );
   }
+  GetClassParnerts(id_student: number){
+    return this.http.get<any>(
+      `${this.url}GetClassParnerts/${id_student}`
+    );
+  }
 }

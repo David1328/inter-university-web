@@ -11,11 +11,15 @@ export class AppComponent implements OnInit {
 
   }
   seeMenu:boolean=false;
+  user:string="";
+  userJson:any=null;
   title = 'inter-university-web';
   ngOnInit(): void {
     const userString = localStorage.getItem('user');
     if ((userString ? JSON.parse(userString) : null) != null) {
       this.seeMenu=true
+      this.userJson =(userString ? JSON.parse(userString) : null)
+      this.user= this.userJson[0].document;
     }
   }
   cerrarSesion(){
