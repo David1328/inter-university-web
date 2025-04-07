@@ -1,0 +1,58 @@
+<mat-card class="formIngres">
+    <mat-card-title>Registro para Estudiante</mat-card-title>
+    <mat-card-content>
+        <div>
+            <form [formGroup]="form" class="form-inline">
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput formControlName="first_name" placeholder="Jaime" type="text">
+                        <mat-icon matSuffix>face</mat-icon>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Apellido</mat-label>
+                        <input matInput formControlName="last_name" placeholder="Quintero" type="text">
+                        <mat-icon matSuffix>face</mat-icon>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Carrera</mat-label>
+                        <mat-select matInput formControlName="career">
+                            <mat-option value="Ingenieria de sistemas">Ingenieria de sistemas</mat-option>
+                        </mat-select>
+                        <mat-icon matSuffix>face</mat-icon>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Documento</mat-label>
+                        <input matInput formControlName="documento" placeholder="355748925" type="text" pattern="[0-9]*"
+                            inputmode="numeric">
+                        <mat-icon matSuffix>face</mat-icon>
+                        <mat-error *ngIf="form.get('documento')?.hasError('required')">
+                            El documento es obligatorio
+                        </mat-error>
+                        <mat-error *ngIf="form.get('documento')?.hasError('pattern')">
+                            Solo se permiten números
+                        </mat-error>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput formControlName="passwordS" placeholder="1234" type="password">
+                        <mat-icon matSuffix>password</mat-icon>
+                    </mat-form-field>
+                </p>
+                <div class="bottonLogInd">
+                    <button mat-fab extended type="submit" color="warm" [disabled]="form.invalid"
+                    (click)="RegistryStudent()">
+                        <mat-icon>person_add</mat-icon> Registrar</button>
+                </div>
+            </form>
+        </div>
+    </mat-card-content>
+</mat-card>
